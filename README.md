@@ -34,5 +34,5 @@ pip install -r requirements.txt
 python app.py
 ``` 
 
-**Hassaan Shaikh**  Software Developer
-[LinkedIn](https://www.linkedin.com/in/hassaan-shaikh-747632249/) | [Portfolio](https://portfolio-hassaan.netlify.app/) 
+**Hassaan Shaikh** -- Software Developer
+* [LinkedIn](https://www.linkedin.com/in/hassaan-shaikh-747632249/) | [Portfolio](https://portfolio-hassaan.netlify.app/) 
