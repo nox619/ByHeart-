@@ -1,0 +1,717 @@
+/* HOME PAGE */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html, body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: #f7f9fc;
+    color: #333;
+    
+  }
+  
+  /* Layout: sidebar + main content */
+  body {
+    display: flex;
+    
+  }
+  
+  /* Sidebar */
+  /* Add these styles to your style.css */
+.sidebar {
+  width: 250px;
+  background: #aeddf0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  height: 100%;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar-hidden {
+  transform: translateX(-100%);
+}
+
+/* Add/Update these styles in your CSS */
+/* Update the toggle button styles */
+.sidebar-toggle {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  z-index: 1100;
+  background: transparent;
+  border: none;
+  color: #000;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.3s ease;
+  display: block !important;
+}
+
+.sidebar-toggle.active {
+  transform: rotate(180deg);
+}
+
+.sidebar-toggle:hover {
+  color: #333;
+}
+
+.main-content {
+  margin-left: 250px;
+  transition: margin 0.3s ease;
+
+}
+
+.main-content-expanded {
+  margin-left: 0;
+}
+
+@media (max-width: 768px) {
+  .sidebar-toggle {
+      display: block;
+  }
+  
+  .main-content {
+      margin-left: 0;
+      
+  }
+  
+  .sidebar:not(.sidebar-hidden) {
+      transform: translateX(0);
+  }
+}
+  .sidebar-logo img {
+    max-width: 120px;
+    margin-bottom: 1rem;
+  }
+  .sidebar-nav {
+    width: 100%;
+  }
+  .search-form {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .search-input {
+    width: 100%;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #ecfafc;
+
+    min-height: 100vh;
+  }
+  
+  /* Header (Hero) */
+  .hero-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .app-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  .app-tagline {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 0.5rem;
+  }
+  
+  /* Description */
+  .app-description {
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    text-align: center;
+  }
+  .app-description h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+  }
+  .app-description p {
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Input Section */
+  .input-section {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  /* Update textarea styles */
+/* Update textarea styles for fixed size */
+/* Updated Text Area Container */
+/* .text-area-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 640px; 
+  width: 100%;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 20px;
+  background-color: #ecfafc;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+} */
+
+
+
+.byheart-textarea {
+  width: auto;
+  max-width: 600px; /* increased width */
+  resize: none;
+  height: 140px;     /* reduced height */
+  padding: 1.2rem;
+  border: 3px solid #e9eaeb;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  background: #fefefe;
+  transition: all 0.2s ease;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+}
+
+
+.byheart-textarea:focus {
+  border-color: #2091ee;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(116, 185, 255, 0.2);
+  
+}
+
+
+.text-area-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: static;
+}
+
+
+/* Unified Button Style */
+.text-area-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Primary Button (ByHeart) */
+.primary-btn {
+  background: #5ab3e0;
+  color: black;
+  font-weight: 400;
+}
+
+.primary-btn:hover {
+  background: #81b9d1
+}
+
+/* Secondary Buttons (Record, Results) */
+.secondary-btn {  
+  background: #aeddf0;
+  color: #333;
+}
+
+.secondary-btn:hover {
+  background: #8cb5cd;
+}
+
+/* Button Icons */
+.button-icon {
+  font-size: 1.4rem;
+  color: inherit;
+}
+
+/* Keep the rest of the existing styles */
+.byheart-textarea:focus {
+    outline: none;
+    border-color: #8ed1fc;
+    box-shadow: 
+        0 2px 6px rgba(140, 209, 252, 0.2),
+        0 4px 12px rgba(140, 209, 252, 0.1);
+    background: #f8fbff;
+}
+
+.byheart-textarea:hover {
+    border-color: #b3d9ff;
+}
+
+/* Floating label effect */
+.byheart-form {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.byheart-label {
+  position: absolute;
+  top: -1.8rem;
+  left: 0.5rem;
+  font-weight: 500;
+  color: #666;
+  font-size: 1rem;
+  pointer-events: none;
+  transform-origin: left center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.byheart-textarea:focus ~ .byheart-label,
+.byheart-textarea:not(:placeholder-shown) ~ .byheart-label {
+  transform: translateY(-1.5rem) scale(0.85);
+  color: #8ed1fc;
+}
+
+/* Character counter */
+.character-counter {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+}
+  .byheart-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    background: linear-gradient(135deg, #74b9ff, #81ecec);
+    color: #fff;
+    transition: background 0.3s ease;
+    font-weight: 600;
+  }
+  .byheart-button:hover {
+    background: linear-gradient(135deg, #0984e3, #00cec9);
+  }
+
+  .record-section,
+.results-link-section {
+  display: inline-block;
+  margin: 1rem;
+}
+
+.video-floating-container {
+    position: fixed;   /* Stay in the same place even if user scrolls */
+    bottom: 2rem;      /* Adjust vertical position */
+    right: 2rem;       /* Adjust horizontal position */
+    z-index: 9999;     /* Keep it on top of other elements */
+  }
+  
+  .video-floating {
+    width: 320px;      /* Adjust to your preference */
+    height: auto;
+    border: 4px solid #ccc;
+    border-radius: 45px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0.8;      /* Slight transparency */
+    transition: opacity 0.3s ease;
+  }
+  
+  .video-floating:hover {
+    opacity: 1;        /* Become fully visible on hover */
+  }
+  
+  
+
+  /* Results page */
+
+
+/* Results Page Specific Styles */
+
+/* Container for the results content */
+.results-section {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.results-box {
+  background: #f7f9fc;
+  border: 2px solid #dfe6e9;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.results-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.results-subtext {
+  font-size: 1rem;
+  margin: 1rem 0 0.5rem;
+  color: #555;
+}
+
+.sidebar-logo img {
+  max-width: 120px;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.text-area-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.text-area-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.primary-btn {
+  background: #5ab3e0;
+  color: black;
+  font-weight: 500;
+}
+
+.primary-btn:hover {
+  background: #81c6e8;
+}
+
+.secondary-btn {
+  background: #aeddf0;
+  color: #333;
+}
+
+.secondary-btn:hover {
+  background: #8cb5cd;
+}
+
+
+.history-label {
+  font-size: 1rem;
+  color: #2c3e50;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  text-align: center;
+  background: #dff9fb;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+}
+
+  
+  /* Recited answer */
+  .recited-answer {
+    background: #ffffff;
+    border: 2px dashed #74b9ff;
+    padding: 1rem;
+    margin: 1rem auto;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    white-space: pre-line; /* preserve line breaks */
+    max-width: 600px;
+  }
+  
+  
+  /* Accuracy Score */
+  .accuracy-score {
+    display: inline-block;
+    background: #dff9fb;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #0984e3;
+    margin: 1rem 0;
+  }
+  
+  /* Feedback Text */
+  .positive-feedback {
+    color: #2ecc71; /* Green */
+    font-weight: 500;
+  }
+  .neutral-feedback {
+    color: #f1c40f; /* Yellow */
+    font-weight: 500;
+  }
+  .negative-feedback {
+    color: #e74c3c; /* Red */
+    font-weight: 500;
+  }
+  
+  /* Example link styling in the sidebar */
+  .nav-link {
+    display: block;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    text-align: center;
+    background: #dff9fb;
+    transition: background 0.3s ease;
+  }
+  .nav-link:hover {
+    background: #c7ecee;
+  }
+  
+  /* Example for big green box or highlight if you want */
+  .highlight-box {
+    background: #dfffd6;
+    border: 2px solid #55efc4;
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1rem auto;
+    color: #2c3e50;
+  }  
+
+  .what-is-byheart {
+    text-align: left;
+    font-size: 1rem;
+    max-width: 600px;
+    border: 1px;
+    padding: 1rem;
+    background: #d1eefd;
+    border-radius: 20px;
+    border-color: #9fbfca;
+    border-style: solid;
+    border-width: 2px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+   
+}
+
+
+/* Layout for side-by-side welcome and input section */
+.content-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.welcome-logo {
+  width: 60px;
+  height: auto;
+  margin-bottom: 0.75rem;
+}
+
+.what-is-byheart {
+  flex: 1;
+  text-align: left;
+  font-size: 1rem;
+  background: #d1eefd;
+  border-radius: 20px;
+  border: 2px solid #9fbfca;
+  padding: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.aligned-input {
+  flex: 1;
+}
+
+/* Sidebar logo size fix */
+.sidebar-logo img {
+  max-width: 90px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* Layout section with input on left and welcome on right */
+/* Layout: Input and Welcome side by side */
+.horizontal-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  margin-top: 2rem;
+  background: #cce7f2;
+  padding: 2.5rem; /* Increased padding */
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  max-width: 95%; /* Changed from 100% to control max width */
+  width: 65vw; /* New: Uses viewport width units */
+  min-width: 800px; /* New: Minimum width */
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.horizontal-layout::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 2rem; /* Starts after top padding */
+  bottom: 2rem; /* Ends before bottom padding */
+  width: 3px;
+  background-color: #92bdd2;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+
+.input-side,
+.what-is-byheart {
+  flex: 1;
+  text-align: left;
+  font-size: 1rem;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 1.5rem;
+  border: 2px solid #d3e3ec;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  margin: 0; /* important to prevent offset */
+}
+
+
+
+@media (max-width: 768px) {
+  .horizontal-layout {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .input-side,
+  .what-is-byheart {
+    max-width: 100%;
+  }
+}
+
+
+/* Welcome box on the right */
+.what-is-byheart {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 1.5rem;
+  border: 2px solid #d3e3ec;
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+/* Logo inside welcome box */
+.welcome-logo {
+  width: 140px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+
+/* Resize sidebar logo */
+.sidebar-logo img {
+  max-width: 80px;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* WRAPPER: reduce total width + center layout */
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  max-width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* VERTICAL LINE BETWEEN DIVS */
+.content-wrapper::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #43a1be;
+  transform: translateX(-50%);
+}
+
+/* MAKE BOTH SIDES EQUAL WIDTH */
+.input-section,
+.welcome-section {
+  flex: 1;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* TEXTAREA STYLING WRAPPER */
+.text-area-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #ecfafc;
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 1rem;
+}
+
+/* TEXTAREA ITSELF */
+.byheart-textarea {
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+  padding: 20px;
+  border: 2px solid #dae2e7;
+  box-shadow: inset 1px 1px 5px rgba(200, 249, 255, 0.918);
+  font-size: 16px;
+}
+
+/* WELCOME BOX LOGO INSIDE */
+.welcome-logo {
+  width: 140px !important;
+  height: auto;
+}
+
