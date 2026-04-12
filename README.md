@@ -1,9 +1,3 @@
-Understood, Hassaan. I'll dial back the fluff and keep it strictly based on the files in your repo and the technical details from your resume.
-
-Since your project uses **Python**, **Flask** (implied by `templates` and `app.py`), and **SQLite** (`database.db`), here is a clean, direct README that focuses on your actual work.
-
------
-
 # ByHeart – Intelligent Memorization Assistant
 
 **Capstone Project | AI-Driven Learning Tool**
