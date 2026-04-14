@@ -1,19 +1,20 @@
 # ByHeart – Intelligent Memorization Assistant
-**Capstone Project | [cite_start]Software Development** [cite: 24]
+**Capstone Project | Software Development** 
 
 ## 📌 Project Overview
-[cite_start]ByHeart is an AI-driven memorization assistant designed to improve rote learning efficiency[cite: 24, 25]. [cite_start]The system integrates Computer Vision and Speech-to-Text to monitor user recitation and provide real-time accuracy scoring while preventing "cheating" through gaze detection[cite: 25, 26].
+ByHeart is an AI-driven memorization assistant designed to improve rote learning efficiency.
+The system integrates Computer Vision and Speech-to-Text to monitor user recitation and provide real-time accuracy scoring while preventing "cheating" through gaze detection.
 
 ## 🚀 Key Features
-* **AI-Based Learning:** Processes text through OCR and voice-to-text workflows[cite: 25, 26, 27].
-* [cite_start]**Gaze Detection:** Uses Computer Vision to detect if a user looks at the screen during recitation[cite: 25].
-* [cite_start]**Live Accuracy Scoring:** Implements real-time text comparison and performance metrics[cite: 26].
+**AI-Based Learning:** Processes text through OCR and voice-to-text workflows[cite: 25, 26, 27].
+**Gaze Detection:** Uses Computer Vision to detect if a user looks at the screen during recitation[cite: 25].
+**Live Accuracy Scoring:** Implements real-time text comparison and performance metrics[cite: 26].
 
 ## 🛠️ Technical Stack
-* **Languages:** Python and JavaScript[cite: 29].
+* **Languages:** Python and JavaScript.
 * **Backend:** Flask (Python) with SQLite database management.
 * **Frontend:** HTML, CSS, and JavaScript.
-* [cite_start]**AI/ML:** Computer Vision, OCR, and Speech-to-Text[cite: 27].
+* **AI/ML:** Computer Vision, OCR, and Speech-to-Text
 
 ## 📂 Repository Structure
 * `app.py`: Core application logic and backend routes [{47657F95-3E75-42E6-9EE4-1A150B95A6D9}.png].
