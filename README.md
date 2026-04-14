@@ -6,9 +6,9 @@ ByHeart is an AI-driven memorization assistant designed to improve rote learning
 The system integrates Computer Vision and Speech-to-Text to monitor user recitation and provide real-time accuracy scoring while preventing "cheating" through gaze detection.
 
 ## 🚀 Key Features
-**AI-Based Learning:** Processes text through OCR and voice-to-text workflows[cite: 25, 26, 27].
-**Gaze Detection:** Uses Computer Vision to detect if a user looks at the screen during recitation[cite: 25].
-**Live Accuracy Scoring:** Implements real-time text comparison and performance metrics[cite: 26].
+**AI-Based Learning:** Processes text through OCR and voice-to-text workflows.
+**Gaze Detection:** Uses Computer Vision to detect if a user looks at the screen during recitation.
+**Live Accuracy Scoring:** Implements real-time text comparison and performance metrics.
 
 ## 🛠️ Technical Stack
 * **Languages:** Python and JavaScript.
